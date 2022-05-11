@@ -1,6 +1,7 @@
-package io.wisoft.springsecurity.model;
+package io.wisoft.springsecurity.domain.posts.entity;
 
 import io.wisoft.springsecurity.domain.Role;
+import io.wisoft.springsecurity.domain.posts.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,7 +14,7 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserEntity extends BaseTimeEntity{
+public class UserEntity extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

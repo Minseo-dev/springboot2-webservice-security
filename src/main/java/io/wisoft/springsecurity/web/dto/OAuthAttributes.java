@@ -1,7 +1,7 @@
-package io.wisoft.springsecurity.dto;
+package io.wisoft.springsecurity.web.dto;
 
 import io.wisoft.springsecurity.domain.Role;
-import io.wisoft.springsecurity.model.UserEntity;
+import io.wisoft.springsecurity.domain.posts.entity.UserEntity;
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
