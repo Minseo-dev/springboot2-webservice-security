@@ -1,4 +1,4 @@
-package io.wisoft.springsecurity.domain.posts;
+package io.wisoft.springsecurity.domain.posts.entity;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -14,9 +14,9 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 public class BaseTimeEntity {
 
-    @CreatedDate // 3
+    @CreatedDate
     private LocalDateTime createdDate;
-    @LastModifiedDate // 4
+    @LastModifiedDate
     private LocalDateTime modifiedDate;
 
 }

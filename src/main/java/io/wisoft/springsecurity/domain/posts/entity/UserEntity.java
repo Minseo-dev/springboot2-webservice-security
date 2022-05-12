@@ -1,7 +1,6 @@
 package io.wisoft.springsecurity.domain.posts.entity;
 
 import io.wisoft.springsecurity.domain.Role;
-import io.wisoft.springsecurity.domain.posts.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
