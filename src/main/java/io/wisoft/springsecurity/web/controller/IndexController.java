@@ -2,7 +2,6 @@ package io.wisoft.springsecurity.web.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -14,6 +13,10 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/posts/save")
+    public String postsSave(){
+        return "posts-save";
+    }
 
 //    private final HttpSession httpSession;
 //
