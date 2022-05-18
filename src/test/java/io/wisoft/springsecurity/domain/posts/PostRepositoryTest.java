@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -44,8 +45,8 @@ public class PostRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        assertThat(posts.getTitle()).isEqualTo(title);
-        assertThat(posts.getContent()).isEqualTo(content);
+        assertEquals(posts.getTitle(), title);
+        assertEquals(posts.getContent(), content);
     }
 
     @Test

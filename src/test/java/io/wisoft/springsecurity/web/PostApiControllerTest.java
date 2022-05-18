@@ -17,6 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -54,7 +55,7 @@ public class PostApiControllerTest {
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url,requestDto,Long.class);
 
         //then
-        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertEquals(responseEntity.getStatusCode(),HttpStatus.OK);
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
         List<Posts> all = postsRepository.findAll();

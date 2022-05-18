@@ -1,4 +1,4 @@
-package io.wisoft.springsecurity.domain;
+package io.wisoft.springsecurity.domain.user;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

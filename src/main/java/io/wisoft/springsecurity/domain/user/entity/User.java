@@ -1,7 +1,7 @@
-package io.wisoft.springsecurity.domain.posts.entity;
+package io.wisoft.springsecurity.domain.user.entity;
 
-import io.wisoft.springsecurity.domain.Role;
-import lombok.AllArgsConstructor;
+import io.wisoft.springsecurity.domain.user.Role;
+import io.wisoft.springsecurity.domain.posts.entity.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,11 +9,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Getter
-@Entity
-@Builder
 @NoArgsConstructor
-@AllArgsConstructor
-public class UserEntity extends BaseTimeEntity {
+@Entity
+public class User extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +30,17 @@ public class UserEntity extends BaseTimeEntity {
     @Column(nullable = false)
     private Role role;
 
-    public UserEntity update(String name, String image){
+    @Builder
+    public User(String name,String email, String image, Role role){
+
+        this.name = name;
+        this.email = email;
+        this.image = image;
+        this.role = role;
+
+    }
+    public User update(String name, String image){
+
         this.name = name;
         this.image = image;
 
